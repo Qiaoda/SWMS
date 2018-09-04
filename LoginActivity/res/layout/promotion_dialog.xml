@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="促销信息"
+        android:textColor="@color/color_green"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_green" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/shadow_bg"
+        android:layout_margin="8dp">
+        
+        <ListView
+	        android:id="@+id/list_promotion"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:cacheColorHint="#00000000"
+	        android:divider="#00000000"
+	        android:dividerHeight="5dp"
+	        android:focusable="false"
+	        android:focusableInTouchMode="false"
+	        android:listSelector="#00000000" />
+    </LinearLayout>
+    
+    <TextView
+            android:id="@+id/tv_micro_mall"
+            style="@style/normal_button_text"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:text="微商城" />
+</LinearLayout>

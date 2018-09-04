@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg" >
+
+    <LinearLayout
+        android:id="@+id/self_sku_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shadow_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView 
+                style="@style/normal_black_text"
+                android:text="原单号：" />
+
+            <TextView
+                android:id="@+id/orign_order_num"
+                style="@style/normal_black_text"
+                android:gravity="left" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView 
+                style="@style/normal_black_text"
+                android:text="单号：" />
+
+            <TextView
+                android:id="@+id/order_num"
+                style="@style/normal_black_text"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" >
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+                <TextView 
+	                style="@style/normal_black_text"
+	                android:text="系统数：" />
+                
+                <TextView
+	                android:id="@+id/sys_count"
+	                style="@style/normal_black_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="invisible">
+                <TextView 
+	                style="@style/normal_black_text"
+	                android:text="差异数：" />
+                
+                <TextView
+	                android:id="@+id/diff_count"
+	                style="@style/normal_black_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+         
+        <LinearLayout
+            android:id="@+id/finish_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_home_horizontal" />
+
+            <TextView
+                android:id="@+id/confirm_time"
+                style="@style/small_gray_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

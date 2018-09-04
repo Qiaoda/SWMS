@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cn.jitmarketing.hot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+<RelativeLayout  
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content">"
+   <LinearLayout
+      android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_button_click_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+     <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back" />
+   </LinearLayout>
+   <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/stock_tab_selector"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/this_allocationnotice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_left_true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="通知"
+                android:textColor="@color/color_white_text" />
+
+            <TextView
+                android:id="@+id/history_allocation_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="已调拨"
+                android:textColor="@color/color_black_text" />
+        </LinearLayout>
+
+           
+
+</RelativeLayout>
+ <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_gray" >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="42dp"
+         android:layout_margin="8dp"
+         android:background="@drawable/shadow_bg"
+         android:gravity="center_vertical" >
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="8dp"
+             android:background="@drawable/search1"
+             android:clickable="false" />
+
+         <cn.jitmarketing.hot.view.ClearEditText
+             android:id="@+id/allocationnoticesearch_edit"
+             style="@style/normal_black_text"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@null"
+             android:ellipsize="end"
+             android:focusable="true"
+             android:focusableInTouchMode="true"
+             android:gravity="left|center_vertical"
+             android:hint="输入通知单号"
+             android:imeOptions="actionSearch"
+             android:inputType="text"
+             android:paddingLeft="8dp"
+             android:paddingRight="8dp"
+             android:singleLine="true" />
+     </LinearLayout>
+ </LinearLayout>
+  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="53dp"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/allocationnoticesearch_list"
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:cacheColorHint="#00000000" >
+            </ListView>
+            <!-- 搜索结果提示 -->
+
+            <TextView
+                android:id="@+id/search_tip"
+                style="@style/normal_black_text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="找不到该单号"
+                android:visibility="gone" />
+        </LinearLayout>
+</LinearLayout>
